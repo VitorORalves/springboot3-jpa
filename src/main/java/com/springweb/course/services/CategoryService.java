@@ -20,7 +20,7 @@ public class CategoryService {
 	}
 	
 	public Category findById(Long id) {
-		Optional<Category> user = repo.findById(id);
-		return user.get();
+		Optional<Category> obj = repo.findById(id);
+		return obj.get();
 	}
 }

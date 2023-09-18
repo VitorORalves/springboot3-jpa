@@ -17,17 +17,17 @@ import com.springweb.course.services.CategoryService;
 public class CategoryResource {
 	
 	@Autowired
-	private CategoryService userService;
+	private CategoryService service;
 	
 	@GetMapping
 	public ResponseEntity<List<Category>> findAll(){
-		List<Category> list = userService.findAll();
+		List<Category> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	
 	@GetMapping(value="/{id}")
 	public ResponseEntity<Category> findBydId(@PathVariable Long id){
-		Category user = userService.findById(id);
-		return ResponseEntity.ok().body(user);
+		Category obj = service.findById(id);
+		return ResponseEntity.ok().body(obj);
 	}
 }

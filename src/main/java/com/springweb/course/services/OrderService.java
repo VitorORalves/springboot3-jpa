@@ -20,7 +20,7 @@ public class OrderService {
 	}
 	
 	public Order findById(Long id) {
-		Optional<Order> user = repo.findById(id);
-		return user.get();
+		Optional<Order> obj = repo.findById(id);
+		return obj.get();
 	}
 }
